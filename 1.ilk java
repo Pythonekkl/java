@@ -1,0 +1,22 @@
+// iki sayi girilecek ondan kalanını verecek kod 
+
+import java.util.Scanner;
+public class sinav1{
+    public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+//for (int i = 0;i<2;i++){
+        System.out.println("Sayi giriniz >");
+        int a=scanner.nextInt();
+        System.out.println("sayi giriniz >");    
+        int b=scanner.nextInt();
+//}
+ while (b != 0) {
+ int temp = b;
+ b = a % b;
+ a = temp;
+ 
+        }
+ System.err.println("EBOB > "+a);
+
+}
+}
