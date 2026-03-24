@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class sinav1{
+    public static void main(String[] args) {
+    Scanner scanner=new Scanner(System.in);
+    
+         System.out.print("Sayi giriniz > ");
+        int a = scanner.nextInt();
+
+        int toplam = 0;
+        
+        System.out.println("Sayılar:");
+
+        for (int i = a; i >= 1; i--) {
+            System.out.println(i);
+            toplam += i;
+      
+        }
+        
+        System.out.println("Toplam: " + toplam);
+           
+    }
+}
