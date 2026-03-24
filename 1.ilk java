@@ -21,3 +21,45 @@ public class sinav1{
 }
 }
 //burdan iki sayi girilecek ilk giren sayini ikinci giren sayi bölecek ve sonucu (bölünen ve kalan yzadıracak )!
+
+import java.util.Scanner;
+public class EbobOklid {
+ public static void main(String[] args) {
+ Scanner scanner = new Scanner(System.in);
+ System.out.print("Birinci sayıyı girin: ");
+ int a = scanner.nextInt();
+ System.out.print("İkinci sayıyı girin: ");
+ int b = scanner.nextInt();
+ while (b != 0) {
+ int temp = b;
+ b = a % b;
+ a = temp;
+ }
+ System.out.println("EBOB: " + a);
+ }
+}
+
+//burada iki sayi giilecek ve çarpılması gerekyor ama çarpma sembolunu kullanmadan 
+// iki sayi girilecek ondan kalanını verecek kod 
+
+import java.util.Scanner;
+public class sinav1{
+    public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+//for (int i = 0;i<2;i++){
+        System.out.println("Sayi giriniz >");
+        int a=scanner.nextInt();
+        System.out.println("sayi giriniz >");    
+        int b=scanner.nextInt();
+//}
+int sonuc=0,top=0;
+for (int i=0;i<=b;++i){
+    sonuc=sonuc+a;
+    top=sonuc-a;
+}
+System.out.println("çarpım sonucu çarpılmadan : >"+sonuc+" <tam hesap olarak:>"+top);
+}
+}
+
+
+
