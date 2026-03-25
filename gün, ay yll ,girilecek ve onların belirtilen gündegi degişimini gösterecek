@@ -1,0 +1,34 @@
+
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class sinav1 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Gun giriniz: ");
+        int gun = scanner.nextInt();
+
+        System.out.print("Ay giriniz: ");
+        int ay = scanner.nextInt();
+
+        System.out.print("Yil giriniz: ");
+        int yil = scanner.nextInt();
+
+        System.out.print("Kac gun sonrasi: ");
+        int ekGun = scanner.nextInt();
+
+        LocalDate tarih = LocalDate.of(yil, ay, gun);
+
+        
+        LocalDate yeniTarih = tarih.plusDays(ekGun);
+
+
+     
+        System.out.println("Bugun " + gun + ", " + ekGun + " gun sonra: " + yeniTarih.getDayOfMonth());
+           if(yeniTarih.getDayOfMonth()==30){
+        System.out.println("BUGUN SYNAV VAR UUNUTMA !");
+    }
+}
+}
