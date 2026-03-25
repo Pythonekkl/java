@@ -1,0 +1,45 @@
+
+import java.util.Scanner;
+
+public class sinav1{
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("1. sayıyı gir: ");
+        int a = sc.nextInt();
+
+        System.out.print("2. sayıyı gir: ");
+        int b = sc.nextInt();
+
+        int toplam = 0;
+        int sayac = 0;
+
+        for (int i = a; i <= b; i++) {
+
+            if (asalMi(i)) {
+                toplam += i;
+                sayac++;
+            }
+        
+        }
+        if(sayac>0){
+            double ortalama=(double) toplam/sayac;
+            System.out.println("Ortalama:"+ortalama);
+
+        }else{
+            System.out.println("asal sayi yok");
+        }
+    }
+public static boolean asalMi(int sayi){
+    if(sayi <=1)
+    return false;
+ for (int i = 2; i <= Math.sqrt(sayi); i++) {
+if (sayi % i == 0) 
+return false;
+     }
+    
+return true;
+}
+}
