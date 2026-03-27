@@ -1,0 +1,25 @@
+
+import java.util.Random;
+
+public class Randome {
+
+    public static void main(String[] args) {
+        int[] a =new int[100];
+        
+        for (int i = 0; i < 100; ++i) {
+            Random rand=new Random();
+           int q=rand.nextInt(1000);
+            a[i]=q;
+        
+        }
+        double ort = ortalama(a);
+        System.out.println("ortalama:"+ort);
+    }
+public static double ortalama(int[]dizi){
+    double toplam=0;
+    for(int i=0;i<100;i++){
+        toplam+=dizi[i];
+    }
+    return toplam/100;
+}
+}
